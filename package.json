@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watch",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --maxWorkers=50% --passWithNoTests --watch",
+    "test:staged": "jest --maxWorkers=25% --passWithNoTests"
   },
   "keywords": [],
   "author": "",
