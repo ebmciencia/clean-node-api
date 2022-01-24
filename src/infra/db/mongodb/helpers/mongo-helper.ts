@@ -15,5 +15,19 @@ export const MongoHelper = {
 
   getCollection (name: string): Collection {
     return this.db.collection(name)
+  },
+
+  map: (collection: any): any => {
+    const { _id, ...collectionWithoutId } = collection
+    return Object.assign({}, collectionWithoutId, { id: _id })
   }
+/*   let accountWithoutId = account as Object
+  accountWithoutId = Object.keys(accountWithoutId).reduce((accumulator, key) => {
+    if (key !== '_id') {
+      accumulator[key] = accountWithoutId[key]
+    }
+    return accumulator
+  }, {})
+  const adjustedAccount = Object.assign({}, accountWithoutId, { id: account._id })
+  return adjustedAccount as unknown as AccountModel */
 }
