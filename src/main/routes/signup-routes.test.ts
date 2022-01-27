@@ -4,7 +4,7 @@ import app from '../config/app'
 
 describe('SignUp Routes', () => {
   beforeAll(async () => {
-    await MongoHelper.connect()
+    await MongoHelper.connect(global.__MONGO_URI__)
   })
 
   afterAll(async () => {
