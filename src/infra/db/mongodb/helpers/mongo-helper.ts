@@ -18,7 +18,6 @@ export const MongoHelper = {
   },
 
   async getCollection (name: string): Promise<Collection> {
-    console.log('typeof (this.db)', typeof (this.db))
     if ((typeof (this?.db) === 'object') ? (this.db !== null) : false) {
       return this.db.collection(name)
     }
