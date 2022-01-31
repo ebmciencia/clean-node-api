@@ -1,6 +1,6 @@
 import { Router } from 'express'
+import { adaptRoute } from '../adapters/express-route-adapter'
 import { makeSignUpController } from '../factories/signup'
-import { adaptRoute } from './adapters/express-route-adapter'
 
 export default (router: Router): void => {
   // eslint-disable-next-line @typescript-eslint/no-misused-promises
